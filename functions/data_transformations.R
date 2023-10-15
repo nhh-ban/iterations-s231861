@@ -54,8 +54,9 @@ stations_metadata_df %>%
 ## Function that creates volume queries.
 # Arguments: Station id, from-  and to dates:
 
-
-
+# Didn't manage to do anything more here. Trouble with creating a function
+# that takes the arguments "id", "from" and "to". 
+# Wait for the solution to update my work!
 
 
 
