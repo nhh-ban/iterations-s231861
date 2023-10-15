@@ -17,7 +17,7 @@ stations_metadata[[1]] %>%
   # Below it will try to return the first item of each sub list in latestData
   # '.default=NA_character_' is necessarily!!!!
   mutate(latestData = map_chr(latestData, 1, .default=NA_character_)) %>%
-  mutate(latestData = as_datetime(latestData, tz = "Europe/Berlin")) %>%
+  mutate(latestData = as_datetime(latestData, tz = "UTC")) %>%
   # To fix location, we unlist first
   mutate(location = map(location, unlist)) %>%
   mutate(
