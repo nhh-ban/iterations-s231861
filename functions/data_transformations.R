@@ -28,7 +28,7 @@ stations_metadata[[1]] %>%
 }
 
 
-#### Assignment 4 getting volume data
+#### Assignment 4 getting volume data ----
 # Add a function called 'to_iso8601':
 # Assign two argument;
 to_iso8601 <- function(input_datetime, offset_days) {
@@ -41,9 +41,12 @@ to_iso8601 <- function(input_datetime, offset_days) {
 to_iso8601(as_datetime("2016-09-01 10:11:12"), 0)
 to_iso8601(as_datetime("2016-09-01 10:11:12"), -4)
 
+
+# Add function to change from- and to times.
+# Need to be the same as vegvesen-api
 dateformat <- function(stations_metadata_df) {
-  # Use as.POSIXct to convert to the format
-  stations_metadata_df$latestData <- format(stations_metadata_df$latestData, format = "%Y-%m-%dT%H:%M:%SZ")
+  # Convert to the format
+  stations_metadata_df$latestData <- format(stations_metadata_df$latestData, "%Y-%m-%dT%H:%M:%SZ")
   
   return(stations_metadata_df)
 }
