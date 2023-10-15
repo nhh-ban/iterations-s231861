@@ -42,14 +42,12 @@ to_iso8601(as_datetime("2016-09-01 10:11:12"), 0)
 to_iso8601(as_datetime("2016-09-01 10:11:12"), -4)
 
 dateformat <- function(stations_metadata_df) {
-  # Use as.POSIXct to convert the format
-  #stations_metadata_df$latestData <- as.POSIXct(stations_metadata_df$latestData, format = "%Y-%m-%d %H:%M:%S")
-  # Format to needed format:
+  # Use as.POSIXct to convert to the format
   stations_metadata_df$latestData <- format(stations_metadata_df$latestData, format = "%Y-%m-%dT%H:%M:%SZ")
   
   return(stations_metadata_df)
 }
-# Add the changes to the original df. 
+# Add the changes to the df. 
 stations_metadata_df <- dateformat(stations_metadata_df)
 
 
