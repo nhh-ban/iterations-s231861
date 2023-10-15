@@ -3,7 +3,8 @@
 stations_metadata[[1]][[1]] %>%
   as_tibble()
 
-transform_metadata_to_df <-
+transform_metadata_to_df <- function(x) {
+  transformed_data <- x %>%
 # Apply this for every station in the list:
 # Specify in data "stations_metadata" that we are looking at 1 = remember it's a list
 stations_metadata[[1]] %>%
@@ -25,3 +26,4 @@ stations_metadata[[1]] %>%
     lon = map_dbl(location, "latLon.lat")
   ) %>%
   select(-location)
+}
