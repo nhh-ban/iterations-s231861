@@ -66,7 +66,7 @@ test_stations_metadata_latestdata_timezone <-
     }
   }
 
-
+# Results in to one vector:
 test_stations_metadata <- 
   function(stations_metadata_df){
     test_stations_metadata_colnames(stations_metadata_df)
