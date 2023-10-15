@@ -34,7 +34,7 @@ stations_metadata <-
 
 #### 2: Transforming metadata
 
-source("functions/data_transformations.R")
+source("functions/data_transformations.r")
 
 stations_metadata_df <- 
   stations_metadata %>% 
