@@ -46,6 +46,12 @@ source("functions/data_tests.r")
 test_stations_metadata(stations_metadata_df)
 
 
+#### 4: 
+# Didn't manage to finish problem 4. Trouble with creating a function
+# that takes the arguments "id", "from" and "to". 
+# Wait for the solution to update my work!
+
+
 ### 5: Final volume query: 
 
 source("gql-queries/vol_qry.r")
